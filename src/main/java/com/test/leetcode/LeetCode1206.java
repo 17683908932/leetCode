@@ -6,18 +6,14 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * 跳跃表
+ * 参考:
+ * concurrentSkipListMap
+ * Redis skipList.
+ */
 public class LeetCode1206 {
 
-	public static void sout(Skiplist skiplist) {
-		Skiplist.Node n = skiplist.head;
-		while (n.nexts != null) {
-			for (Skiplist.Node next : n.nexts) {
-				System.out.print(n.value + ",");
-			}
-			System.out.println();;
-			n = n.nexts[0];
-		}
-	}
 	public static void main(String[] args) {
 		Skiplist skiplist = new Skiplist();
 		Random random = new Random();
